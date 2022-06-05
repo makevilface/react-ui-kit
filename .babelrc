@@ -1,0 +1,4 @@
+{
+  "presets": [["react-app", { "flow": false, "typescript": true }], "@linaria/babel-preset"],
+  "plugins": ["transform-class-properties"]
+}

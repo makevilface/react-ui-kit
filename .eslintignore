@@ -1,0 +1,7 @@
+dist
+.yarn
+.node
+.linaria-cache
+.babelrc
+.prettierrc
+build*
