@@ -13,3 +13,5 @@ export { default as PhoneField } from './PhoneField';
 export { default as Promo } from './Promo';
 export { default as SideBar } from './SideBar';
 export { default as Tooltip } from './Tooltip';
+export { default as Meta } from './Meta';
+export { default as Theme } from './Theme';
