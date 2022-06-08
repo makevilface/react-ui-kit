@@ -2,7 +2,7 @@ import React from 'react';
 
 import { styled } from '@linaria/react';
 
-import Header from '../../react-ui-kit/view/Header';
+import Header from '../../react-ui-kit/presentation/view/Header';
 
 type GeneralLayoutProps = {
   children: React.ReactNode;

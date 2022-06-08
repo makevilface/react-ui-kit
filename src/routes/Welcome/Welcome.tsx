@@ -4,9 +4,9 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import WavingHandImage from '../../assets/waving-hand.png';
-import { Button } from '../../react-ui-kit/view';
-import { ArrowRightCircleIcon } from '../../react-ui-kit/view/Icon';
-import { sharedPreferences } from '../../react-ui-kit/view/styles/sharedPreferences';
+import { Button } from '../../react-ui-kit/presentation/view';
+import { ArrowRightCircleIcon } from '../../react-ui-kit/presentation/view/Icon';
+import { sharedPreferences } from '../../react-ui-kit/presentation/view/styles/sharedPreferences';
 
 const SWelcomePageContainer = styled.div`
   width: 100%;

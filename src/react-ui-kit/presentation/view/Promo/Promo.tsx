@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import AppleWatchImg from '../../../assets/apple-watch.jpeg';
+import AppleWatchImg from '../../../../assets/apple-watch.jpeg';
 import { useLockScroll } from '../../utils/hooks/useLockScroll';
 import { useOnEscPress } from '../../utils/hooks/useOnEscPress';
 import { usePreparePortal } from '../../utils/hooks/usePreparePortal';

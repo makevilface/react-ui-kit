@@ -7,7 +7,8 @@
     "webpack": "cross-env NODE_ENV=development webpack",
     "start": "cross-env NODE_ENV=development webpack serve ",
     "build": "cross-env NODE_ENV=production webpack build ",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.ts,.tsx,.json",
+    "lint:fix": "eslint --fix . --ext .js,.ts,.tsx,.json",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
     "storybook": "start-storybook -p 9001",
     "storybook:build": "build-storybook -o dist/storybook"

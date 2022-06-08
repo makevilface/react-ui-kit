@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { Button } from '../../react-ui-kit/view';
-import { ChevronLeftIcon, GoogleIcon, MailIcon, PhoneIcon } from '../../react-ui-kit/view/Icon';
+import { Button } from '../../react-ui-kit/presentation/view';
+import { ChevronLeftIcon, GoogleIcon, MailIcon, PhoneIcon } from '../../react-ui-kit/presentation/view/Icon';
 
 const SLoginPageContainer = styled.div`
   display: flex;

@@ -3,8 +3,8 @@ import React, { Suspense } from 'react';
 
 import { styled } from '@linaria/react';
 
-import Loader from '../../react-ui-kit/view/Loader';
-import { GlobalStyles } from '../../react-ui-kit/view/styles/globalStyles';
+import Loader from '../../react-ui-kit/presentation/view/Loader';
+import { GlobalStyles } from '../../react-ui-kit/presentation/view/styles/globalStyles';
 import Router from '../Router';
 
 const SAppSpinner = styled.div`

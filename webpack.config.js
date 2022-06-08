@@ -6,12 +6,14 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
+const ROOT = path.resolve(__dirname);
+
 module.exports = {
   entry: {
     app: './src/index',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(ROOT, 'dist'),
     publicPath: '/dist/',
     filename: '[name].bundle.js',
   },
@@ -22,11 +24,11 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@utils': path.resolve(__dirname, 'src/utils'),
-      '@styles': path.resolve(__dirname, 'src/styles'),
-      '@layout': path.resolve(__dirname, 'src/layout'),
+      '@': path.resolve(ROOT, 'src'),
+      '@components': path.resolve(ROOT, 'src/components'),
+      '@utils': path.resolve(ROOT, 'src/utils'),
+      '@styles': path.resolve(ROOT, 'src/styles'),
+      '@layout': path.resolve(ROOT, 'src/layout'),
     },
   },
   module: {
@@ -77,7 +79,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: 'styles.css', ignoreOrder: true }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'public', 'index.html'),
+      template: path.join(ROOT, 'public', 'index.html'),
     }),
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
@@ -85,7 +87,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     publicPath: '/dist/',
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(ROOT, 'public'),
     compress: true,
     port: 9000,
   },

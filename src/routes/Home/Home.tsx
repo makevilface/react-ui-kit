@@ -15,7 +15,7 @@ import {
   NotificationsContainer,
   PhoneField,
   Promo,
-} from '../../react-ui-kit/view';
+} from '../../react-ui-kit/presentation/view';
 import { LoginFormSchema } from '../../utils/validations';
 
 const Home = () => {
