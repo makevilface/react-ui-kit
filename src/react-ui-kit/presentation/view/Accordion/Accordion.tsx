@@ -7,14 +7,15 @@ import AccordionItem from './AccordionItem';
 
 type TAccordionProps = {
   items: Array<TAccordion>;
+  title?: string;
 };
 
-const Accordion = ({ items }: Readonly<TAccordionProps>) => {
+const Accordion = ({ items, title }: Readonly<TAccordionProps>) => {
   const [activeIndex, setActiveIndex] = React.useState<number>(2);
 
   return (
     <SContainer>
-      <STitle>Accordion</STitle>
+      <STitle>{title}</STitle>
       <div>
         {items.map((item, index) => {
           const showDescription = index === activeIndex;

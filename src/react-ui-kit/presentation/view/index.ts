@@ -6,7 +6,7 @@ export { default as FormField } from './FormField';
 export { default as Img } from './Img';
 export { default as Loader } from './Loader';
 export { default as Logo } from './Logo';
-export { Notification, NotificationsContainer } from './Notification';
+export { default as Notification } from './Notification';
 export { default as PhoneField } from './PhoneField';
 export { default as Promo } from './Promo';
 export { default as Tooltip } from './Tooltip';

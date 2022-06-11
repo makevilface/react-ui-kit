@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { styled } from '@linaria/react';
 
-import { boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 
 import StorybookContainer from '../StorybookContainer';
@@ -14,11 +13,11 @@ const Demo = styled.div`
 `;
 
 storiesOf('Checkbox', module).add('default', () => {
-  const isChecked = boolean('isChecked', false);
+  const [isChecked, setChecked] = useState(false);
   return (
     <StorybookContainer>
       <Demo>
-        <Checkbox value={isChecked} onToggle={() => {}} />
+        <Checkbox value={isChecked} onToggle={() => setChecked((prev) => !prev)} />
       </Demo>
     </StorybookContainer>
   );

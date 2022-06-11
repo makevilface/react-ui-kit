@@ -12,7 +12,6 @@ import {
   FormField,
   Loader,
   Notification,
-  NotificationsContainer,
   PhoneField,
   Promo,
 } from '../../react-ui-kit/presentation/view';
@@ -41,17 +40,15 @@ const Home = () => {
   return (
     <GeneralLayout>
       <Promo handleRequestClose={handlePromoClose} isOpen={isPromoVisible} />
-      <NotificationsContainer>
-        <Notification
-          actionLabel="open"
-          date="now"
-          onAction={() => {
-            console.log('test');
-          }}
-        />
-        <Notification date="Friday" />
-        <Notification date="now" />
-      </NotificationsContainer>
+      <Notification
+        actionLabel="open"
+        date="now"
+        onAction={() => {
+          console.log('test');
+        }}
+      />
+      <Notification date="Friday" />
+      <Notification date="now" />
       <div>
         <FormProvider {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>

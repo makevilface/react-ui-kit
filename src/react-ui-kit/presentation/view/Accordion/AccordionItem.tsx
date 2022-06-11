@@ -35,7 +35,7 @@ const SItem = styled.div`
 `;
 
 const ShowDescriptionStyles = css`
-  height: 2rem !important;
+  height: auto !important;
   margin-bottom: 15px !important;
 `;
 
@@ -76,6 +76,6 @@ const SButton = styled.button<{ fontWeightBold: boolean }>`
   padding: 17px 0;
 
   &:hover {
-    color: #b6d1c7;
+    opacity: 0.5;
   }
 `;

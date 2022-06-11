@@ -1,4 +1,3 @@
-/* eslint-disable react/no-multi-comp */
 import React from 'react';
 
 import { css } from '@linaria/core';
@@ -41,37 +40,6 @@ const Notification = ({
 );
 
 export default React.memo(Notification);
-
-type TNotificationContainerProps = {
-  children: React.ReactNode[];
-};
-
-export const NotificationsContainer = React.memo(({ children }: Readonly<TNotificationContainerProps>) => {
-  const [isHovered, setHovered] = React.useState<boolean>(false);
-
-  const handleMouseEnter = React.useCallback(() => {
-    setHovered(true);
-  }, [setHovered]);
-
-  const handleMouseLeave = React.useCallback(() => {
-    setHovered(false);
-  }, [setHovered]);
-
-  return (
-    <SStacked role="status" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      {React.Children.map(children, (child, index) => {
-        const lastIndex = children.length - 1;
-        return React.cloneElement(child as React.ReactElement<any, string | React.JSXElementConstructor<any>>, {
-          style: {
-            transform: isHovered
-              ? 'translateY(0px) scale(1)'
-              : `translateY(${(lastIndex - index) * 43}px) scale(${1 - (lastIndex - index) * 0.06})`,
-          },
-        });
-      })}
-    </SStacked>
-  );
-});
 
 const SAction = styled.span`
   cursor: pointer;
@@ -123,18 +91,5 @@ const NotificationWrapperStyles = css`
     min-width: 16px;
     min-height: 16px;
     margin-top: 2px;
-  }
-`;
-
-const SStacked = styled.div`
-  display: inline-block;
-  margin-bottom: 24px;
-
-  .wrapper {
-    transition: transform 0.35s ease-out;
-
-    &:not(:first-of-type) {
-      margin-top: 6px;
-    }
   }
 `;
