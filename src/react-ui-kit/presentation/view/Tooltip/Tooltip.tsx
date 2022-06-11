@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { styled } from '@linaria/react';
 
 import Tippy, { TippyProps } from '@tippyjs/react/headless';
+
+import { newTooltipVM } from './Tooltip.VM';
 
 type TTooltipProps = Omit<TippyProps, 'render'> & {
   text: React.ReactNode;
@@ -10,10 +12,10 @@ type TTooltipProps = Omit<TippyProps, 'render'> & {
 };
 
 const Tooltip = ({ text, delayToShow = 1, children, ...tippyProps }: Readonly<TTooltipProps>) => {
-  const renderTooltip = React.useCallback(() => <STooltip delayToShow={delayToShow}>{text}</STooltip>, [text]);
+  const vm = useMemo(() => newTooltipVM(), []);
 
   return (
-    <Tippy {...tippyProps} render={renderTooltip}>
+    <Tippy {...tippyProps} render={() => vm.renderTooltip(text, delayToShow)}>
       {children}
     </Tippy>
   );
@@ -21,7 +23,7 @@ const Tooltip = ({ text, delayToShow = 1, children, ...tippyProps }: Readonly<TT
 
 export default React.memo(Tooltip);
 
-const STooltip = styled.div<{ delayToShow: number }>`
+export const STooltip = styled.div<{ delayToShow: number }>`
   display: inline-block;
   padding: 5px 10px;
   color: #fff;
