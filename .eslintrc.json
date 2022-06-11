@@ -143,7 +143,7 @@
     "react/react-in-jsx-scope": "off",
     "object-curly-newline": "off",
     "import/no-unresolved": "off",
-    "import/no-extraneous-dependencies": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "overrides": [
     {
