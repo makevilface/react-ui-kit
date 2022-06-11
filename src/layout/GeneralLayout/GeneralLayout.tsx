@@ -2,8 +2,6 @@ import React from 'react';
 
 import { styled } from '@linaria/react';
 
-import Header from '../../react-ui-kit/presentation/view/Header';
-
 type GeneralLayoutProps = {
   children: React.ReactNode;
 };
@@ -19,7 +17,7 @@ const SGeneralLayoutWrapper = styled.div`
 
 const GeneralLayout = ({ children }: GeneralLayoutProps) => (
   <SGeneralLayoutWrapper>
-    <Header />
+    {/* <Header /> */}
     <main id="main-content">{children}</main>
     {/* <Footer /> */}
   </SGeneralLayoutWrapper>
