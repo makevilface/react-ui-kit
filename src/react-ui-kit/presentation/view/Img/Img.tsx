@@ -4,16 +4,16 @@ import { styled } from '@linaria/react';
 
 import { transition } from '../../utils/transition';
 
-type ImgProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
+type TImgProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
   width?: string;
   height?: string;
 };
 
-const Img = (props: Readonly<ImgProps>) => <SImg {...props} />;
+const Img = (props: Readonly<TImgProps>) => <SImg {...props} />;
 
 export default React.memo(Img);
 
-const SImg = styled.img<ImgProps>`
+const SImg = styled.img<TImgProps>`
   width: ${(props) => props.width || 'auto'};
   height: ${(props) => props.height || 'auto'};
 

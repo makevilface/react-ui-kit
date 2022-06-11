@@ -23,6 +23,7 @@ const Checkbox = ({ value, onToggle, isDisabled }: Readonly<CheckboxProps>) => {
 export default React.memo(Checkbox);
 
 const SCheckbox = styled.div`
+  cursor: pointer;
   width: 18px;
   height: 18px;
   background: rgba(0, 0, 0, 0.1);

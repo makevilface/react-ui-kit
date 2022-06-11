@@ -15,7 +15,7 @@ type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   disabled?: boolean;
   stretched?: boolean;
   loading?: boolean;
-  use?: 'primary' | 'social' | 'text';
+  use?: 'primary' | 'text';
   justifyContent?: React.CSSProperties['justifyContent'];
 };
 
@@ -33,7 +33,6 @@ const Button = ({
     aria-disabled={disabled ? 'true' : 'false'}
     className={cn(
       {
-        [SocialButtonStyles]: use === 'social',
         [TextButtonStyled]: use === 'text',
         [StretchedStyles]: stretched,
         [LoadingStyles]: loading,
@@ -51,9 +50,8 @@ const Button = ({
 export default React.memo(Button);
 
 const SButton = styled.button<{ justifyContent: string }>`
-  min-width: 128px;
-  width: 250px;
-  height: 32x;
+  min-width: 140px;
+  min-height: 44px;
 
   font-family: ${sharedPreferences.fontsFamilies.primaryFont};
   font-weight: 600;
@@ -101,17 +99,6 @@ const SButton = styled.button<{ justifyContent: string }>`
   }
 `;
 
-const SocialButtonStyles = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 96px;
-  width: 112px;
-  padding-top: 12px;
-  padding-bottom: 6px;
-`;
-
 const TextButtonStyled = css`
   background-color: transparent;
   display: flex;
@@ -126,7 +113,6 @@ const TextButtonStyled = css`
 `;
 
 const StretchedStyles = css`
-  display: block;
   width: 100%;
   flex-grow: 1;
   flex-basis: 0;
@@ -137,5 +123,6 @@ const LoaderStyles = css`
 `;
 
 const LoadingStyles = css`
-  cursor: wait !important;
+  filter: none !important;
+  pointer-events: none !important;
 `;

@@ -7,7 +7,7 @@ type TSpinnerProps = {
   text?: string;
 };
 
-const fractions = Array.from({ length: 12 }).map((__: unknown, idx: number) => `fraction-${idx}`);
+const fractions = Array.from({ length: 12 }).map((__: unknown, index: number) => `fraction-${index}`);
 
 /**
   Чтобы изменить размер лоудера нужно задать --spinner-size
@@ -30,7 +30,7 @@ const Loader = ({ className = '', text }: Readonly<TSpinnerProps>) => (
 export default React.memo(Loader);
 
 const SWrapper = styled.div`
-  width: 200px;
+  min-width: 100px;
 
   display: flex;
   flex-direction: column;
