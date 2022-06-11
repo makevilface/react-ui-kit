@@ -7,12 +7,8 @@ interface Route {
 
 export const routes: Route[] = [
   {
-    path: '/home',
-    component: lazy(() => import('../routes/Home')),
-  },
-  {
     path: '/',
-    component: lazy(() => import('../routes/Welcome')),
+    component: lazy(() => import('../routes/Home')),
   },
   {
     path: '/:404*',
