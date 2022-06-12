@@ -2,19 +2,19 @@ import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import App from './app/App';
-import Helmet from './app/Helmet';
+import { GlobalStyles } from './react-ui-kit/presentation/view/styles/globalStyles';
 import Theme from './react-ui-kit/presentation/view/Theme';
+import Home from './routes/Home';
 
 ReactDOM.render(
-  <Helmet>
-    <StrictMode>
-      <Router>
-        <Theme>
-          <App />
-        </Theme>
-      </Router>
-    </StrictMode>
-  </Helmet>,
+  <StrictMode>
+    <Router>
+      <Theme>
+        <div className={GlobalStyles}>
+          <Home />
+        </div>
+      </Theme>
+    </Router>
+  </StrictMode>,
   document.getElementById('root'),
 );

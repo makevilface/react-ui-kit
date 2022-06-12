@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Controller, FormProvider, useForm } from 'react-hook-form';
 
 import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
-import GeneralLayout from '../../layout/GeneralLayout';
 import {
   Accordion,
   Avatar,
@@ -15,7 +15,6 @@ import {
   PhoneField,
   Promo,
 } from '../../react-ui-kit/presentation/view';
-import { LoginFormSchema } from '../../utils/validations';
 
 const Home = () => {
   const [isChecked, setChecked] = useState(false);
@@ -31,14 +30,19 @@ const Home = () => {
 
   const form = useForm({
     mode: 'onChange',
-    resolver: yupResolver(LoginFormSchema),
+    resolver: yupResolver(
+      yup.object().shape({
+        email: yup.string().email('Неверная почта').optional(),
+        phone: yup.string().trim().required('Введите номер телефона'),
+      }),
+    ),
   });
   const onSubmit = async (data: any) => {
     console.log('-----data', data);
   };
 
   return (
-    <GeneralLayout>
+    <>
       <Promo handleRequestClose={handlePromoClose} isOpen={isPromoVisible} />
       <Notification
         actionLabel="open"
@@ -102,7 +106,7 @@ const Home = () => {
       />
       <Checkbox value={isChecked} onToggle={handleClick} />
       {/* <Img height="400px" src="https://pbs.twimg.com/media/FR1Rb2DXoAIpUF8?format=jpg&name=large" /> */}
-    </GeneralLayout>
+    </>
   );
 };
 
