@@ -5,7 +5,7 @@ import svg6 from '../public/netflix.svg';
 
 addons.setConfig({
   theme: {
-    ...themes.light,
+    ...themes.dark,
     brandImage: svg6,
     brandTitle: 'Gamma Components',
   },
