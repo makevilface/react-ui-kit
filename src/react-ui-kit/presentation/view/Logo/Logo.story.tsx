@@ -16,7 +16,7 @@ const Demo = styled.div`
 storiesOf('Logo', module).add('default', () => (
   <StorybookContainer>
     <Demo>
-      <Logo height="60px" src={demoSvg} />
+      <Logo height="60px" role="presentation" src={demoSvg} />
     </Demo>
   </StorybookContainer>
 ));
