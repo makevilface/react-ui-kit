@@ -14,3 +14,4 @@ export { default as Meta } from './Meta';
 export { default as Theme } from './Theme';
 export { default as Tag } from './Tag';
 export { default as Panel } from './Panel';
+export { default as Carousel } from './Carousel';
