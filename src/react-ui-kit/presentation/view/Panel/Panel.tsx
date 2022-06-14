@@ -9,13 +9,13 @@ type TPanelProps = React.HTMLAttributes<HTMLDivElement> & {
 /**
   `Panel` – это контейнер для контента.
  */
-const Panel = ({ children }: TPanelProps) => <SPanel>{children}</SPanel>;
+const Panel = ({ children, ...restProps }: TPanelProps) => <SPanel {...restProps}>{children}</SPanel>;
 
 export default Panel;
 
 const SPanel = styled.div`
   min-height: 150px;
-  min-width: 150px;
+  min-width: 100px;
   background-color: #242424;
   border-radius: 12px;
   display: inline-flex;
