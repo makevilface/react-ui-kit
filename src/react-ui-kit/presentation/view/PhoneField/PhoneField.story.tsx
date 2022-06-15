@@ -38,15 +38,12 @@ storiesOf('PhoneField', module).add('default', () => {
             name="phone"
             render={({ field: { onChange, name, value } }) => (
               <PhoneField
-                autoCapitalize="off"
-                autoCorrect="off"
                 hint="введите ваш номер телефона"
                 label="Номер телефона"
                 name={name}
                 optional={isOptional}
                 placeholder="+7 123 463 88 03"
                 required={isRequired}
-                tabIndex={-2}
                 value={value}
                 onChange={onChange}
               />

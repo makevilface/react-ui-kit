@@ -22,9 +22,9 @@ const Notification = ({
   onAction,
   actionLabel,
   iconClassName,
-  ...rest
+  ...restProps
 }: Readonly<TNotificationProps>) => (
-  <div className={cn('wrapper', NotificationWrapperStyles)} role="status" {...rest}>
+  <div className={cn('wrapper', NotificationWrapperStyles)} role="status" {...restProps}>
     <SContainer>
       {children}
       <SDate>{date}</SDate>

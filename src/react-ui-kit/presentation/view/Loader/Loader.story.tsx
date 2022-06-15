@@ -15,7 +15,7 @@ const Demo = styled.div`
 storiesOf('Loader', module).add('default', () => (
   <StorybookContainer>
     <Demo>
-      <Loader />
+      <Loader text="Loading..." />
     </Demo>
   </StorybookContainer>
 ));

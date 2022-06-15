@@ -9,13 +9,15 @@ import { transition } from '../../utils/transition';
 import Loader from '../Loader';
 import { sharedPreferences } from '../styles/sharedPreferences';
 
+type TButtonUse = 'primary' | 'text';
+
 type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
   stretched?: boolean;
   loading?: boolean;
-  use?: 'primary' | 'text';
+  use?: TButtonUse;
   justifyContent?: React.CSSProperties['justifyContent'];
 };
 

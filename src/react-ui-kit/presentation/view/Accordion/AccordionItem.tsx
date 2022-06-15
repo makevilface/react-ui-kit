@@ -8,17 +8,17 @@ import { transition } from '../../utils/transition';
 export type TAccordion = { title: string; description: string };
 
 type TAccordionItemProps = {
-  showDescription: boolean;
+  shouldShowDescription: boolean;
   item: TAccordion;
   onClick: () => void;
 };
 
-const AccordionItem = ({ showDescription, item, onClick }: Readonly<TAccordionItemProps>) => {
-  const descClassName = showDescription ? ShowDescriptionStyles : '';
-  const buttonClassName = showDescription ? SButtonStylesActive : SButtonStyles;
+const AccordionItem = ({ shouldShowDescription, item, onClick }: Readonly<TAccordionItemProps>) => {
+  const descClassName = shouldShowDescription ? ShowDescriptionStyles : '';
+  const buttonClassName = shouldShowDescription ? SButtonStylesActive : SButtonStyles;
   return (
     <SItem key={item.title}>
-      <SButton className={buttonClassName} fontWeightBold={showDescription} type="button" onClick={onClick}>
+      <SButton className={buttonClassName} fontWeightBold={shouldShowDescription} type="button" onClick={onClick}>
         {item.title}
       </SButton>
       <SItemDescription className={descClassName}>{item.description}</SItemDescription>

@@ -9,7 +9,7 @@ import { usePreparePortal } from '../../utils/hooks/usePreparePortal';
 import { CloseIcon } from '../Icon';
 import Tooltip from '../Tooltip';
 
-type TModalProps = React.HTMLAttributes<HTMLDivElement> & {
+type TModalProps = {
   isOpen: boolean;
   handleRequestClose: () => void;
   children: React.ReactNode;

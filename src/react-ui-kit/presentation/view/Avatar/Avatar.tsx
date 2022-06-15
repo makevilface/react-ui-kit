@@ -4,12 +4,16 @@ import { styled } from '@linaria/react';
 
 import cn from 'classnames';
 
+type TAvatarSize = 'small' | 'large';
+
+type TAvatarMode = 'default' | 'app';
+
 type TAvatarProps = React.HTMLAttributes<HTMLDivElement> & {
   status?: string;
   label?: string;
   src?: string;
-  size?: 'small' | 'large';
-  mode?: 'default' | 'app';
+  size?: TAvatarSize;
+  mode?: TAvatarMode;
   className?: string;
 };
 

@@ -4,7 +4,7 @@ import { Controller, FormProvider, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import { Button, FormField, PhoneField } from '../../react-ui-kit/presentation/view';
+import { Button, Carousel, FormField, PhoneField } from '../../react-ui-kit/presentation/view';
 
 const Home = () => {
   const form = useForm({
@@ -22,6 +22,7 @@ const Home = () => {
 
   return (
     <div>
+      <Carousel />
       <FormProvider {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
@@ -40,13 +41,10 @@ const Home = () => {
             render={({ field: { onChange, name, value } }) => (
               <PhoneField
                 required
-                autoCapitalize="off"
-                autoCorrect="off"
                 hint="введите ваш номер телефона"
                 label="Номер телефона"
                 name={name}
                 placeholder="+7 123 463 88 03"
-                tabIndex={-2}
                 value={value}
                 onChange={onChange}
               />

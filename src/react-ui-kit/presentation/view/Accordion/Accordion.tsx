@@ -11,26 +11,21 @@ type TAccordionProps = {
 };
 
 const Accordion = ({ items, title }: Readonly<TAccordionProps>) => {
-  const [activeIndex, setActiveIndex] = React.useState<number>(2);
+  const [activeItemIndex, setActiveItemIndex] = React.useState<number>(2);
 
   return (
     <SContainer>
       <STitle>{title}</STitle>
-      <div>
-        {items.map((item, index) => {
-          const showDescription = index === activeIndex;
-          return (
-            <AccordionItem
-              key={`${index}-${item.title}`}
-              item={item}
-              showDescription={showDescription}
-              onClick={() => {
-                setActiveIndex(index);
-              }}
-            />
-          );
-        })}
-      </div>
+      {items.map((item, index) => (
+        <AccordionItem
+          key={`${index}_${item.title}`}
+          item={item}
+          shouldShowDescription={index === activeItemIndex}
+          onClick={() => {
+            setActiveItemIndex(index);
+          }}
+        />
+      ))}
     </SContainer>
   );
 };

@@ -6,7 +6,7 @@ type TAvatarProps = React.HTMLAttributes<HTMLHeadingElement> & {
   content: string;
 };
 
-const Hero = ({ content }: TAvatarProps) => <SHero>{content}</SHero>;
+const Hero = ({ content, ...restProps }: TAvatarProps) => <SHero {...restProps}>{content}</SHero>;
 
 export default memo(Hero);
 

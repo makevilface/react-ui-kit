@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { styled } from '@linaria/react';
 
@@ -11,7 +11,7 @@ type TPanelProps = React.HTMLAttributes<HTMLDivElement> & {
  */
 const Panel = ({ children, ...restProps }: TPanelProps) => <SPanel {...restProps}>{children}</SPanel>;
 
-export default Panel;
+export default memo(Panel);
 
 const SPanel = styled.div`
   min-height: 150px;
