@@ -11,7 +11,7 @@ import { sharedPreferences } from '../styles/sharedPreferences';
 
 type TButtonUse = 'primary' | 'text';
 
-type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+export type TButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: React.ReactNode;
   className?: string;
   disabled?: boolean;

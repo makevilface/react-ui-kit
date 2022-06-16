@@ -9,7 +9,7 @@ import cn from 'classnames';
 import { transition } from '../../utils/transition';
 import { uuid } from '../../utils/uuid';
 
-type TFormFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
+export type TFormFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
   name: string;
   label?: string;
   hint?: string;

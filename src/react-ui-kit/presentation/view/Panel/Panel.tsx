@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import { styled } from '@linaria/react';
 
-type TPanelProps = React.HTMLAttributes<HTMLDivElement> & {
+export type TPanelProps = React.HTMLAttributes<HTMLDivElement> & {
   children: React.ReactNode;
 };
 

@@ -1,3 +1,6 @@
+/**
+ * Components
+ */
 export { default as Accordion } from './Accordion';
 export { default as Avatar } from './Avatar';
 export { default as Button } from './Button';
@@ -16,3 +19,23 @@ export { default as Tag } from './Tag';
 export { default as Panel } from './Panel';
 export { default as Carousel } from './Carousel';
 export { default as Modal } from './Modal';
+
+/**
+ * Types
+ */
+export type { TTooltipProps } from './Tooltip';
+export type { TTagProps } from './Tag';
+export type { TPromoProps } from './Promo';
+export type { TPhoneFieldProps } from './PhoneField';
+export type { TPanelProps } from './Panel';
+export type { TNotificationProps } from './Notification';
+export type { TModalProps } from './Modal';
+export type { TLogoProps } from './Logo';
+export type { TLoaderProps } from './Loader';
+export type { TImgProps } from './Img';
+export type { THeroProps } from './Hero';
+export type { TFormFieldProps } from './FormField';
+export type { TCheckboxProps } from './Checkbox';
+export type { TButtonProps } from './Button';
+export type { TAvatarProps } from './Avatar';
+export type { TAccordionProps } from './Accordion';

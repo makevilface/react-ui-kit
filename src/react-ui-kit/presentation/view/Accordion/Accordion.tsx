@@ -5,7 +5,7 @@ import { styled } from '@linaria/react';
 import type { TAccordion } from './AccordionItem';
 import AccordionItem from './AccordionItem';
 
-type TAccordionProps = {
+export type TAccordionProps = {
   items: Array<TAccordion>;
   title?: string;
 };

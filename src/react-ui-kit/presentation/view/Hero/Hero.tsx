@@ -2,11 +2,11 @@ import React, { memo } from 'react';
 
 import { styled } from '@linaria/react';
 
-type TAvatarProps = React.HTMLAttributes<HTMLHeadingElement> & {
+export type THeroProps = React.HTMLAttributes<HTMLHeadingElement> & {
   content: string;
 };
 
-const Hero = ({ content, ...restProps }: TAvatarProps) => <SHero {...restProps}>{content}</SHero>;
+const Hero = ({ content, ...restProps }: THeroProps) => <SHero {...restProps}>{content}</SHero>;
 
 export default memo(Hero);
 

@@ -4,7 +4,7 @@ import { styled } from '@linaria/react';
 
 import { transition } from '../../utils/transition';
 
-type TImgProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
+export type TImgProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
   width?: string;
   height?: string;
 };

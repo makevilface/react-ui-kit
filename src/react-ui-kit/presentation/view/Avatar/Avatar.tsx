@@ -8,7 +8,7 @@ type TAvatarSize = 'small' | 'large';
 
 type TAvatarMode = 'default' | 'app';
 
-type TAvatarProps = React.HTMLAttributes<HTMLDivElement> & {
+export type TAvatarProps = React.HTMLAttributes<HTMLDivElement> & {
   status?: string;
   label?: string;
   src?: string;

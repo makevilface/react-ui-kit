@@ -8,7 +8,7 @@ import cn from 'classnames';
 import { CloseIcon } from '../Icon';
 import { sharedPreferences } from '../styles/sharedPreferences';
 
-type TNotificationProps = React.HTMLAttributes<HTMLDivElement> & {
+export type TNotificationProps = React.HTMLAttributes<HTMLDivElement> & {
   message?: React.ReactNode;
   date: string;
   onAction?: () => void;

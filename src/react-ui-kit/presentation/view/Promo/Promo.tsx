@@ -7,7 +7,7 @@ import AppleWatchImg from '../../../../assets/apple-watch.jpeg';
 import Modal from '../Modal';
 import { sharedPreferences } from '../styles/sharedPreferences';
 
-type TPromoProps = React.HTMLAttributes<HTMLDivElement> & {
+export type TPromoProps = React.HTMLAttributes<HTMLDivElement> & {
   isOpen: boolean;
   handleRequestClose: () => void;
 };

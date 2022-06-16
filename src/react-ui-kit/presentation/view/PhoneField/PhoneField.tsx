@@ -11,7 +11,7 @@ import { DEFAULT_PHONE_MASK } from '../../constants';
 import { transition } from '../../utils/transition';
 import { uuid } from '../../utils/uuid';
 
-type TPhoneFieldProps = {
+export type TPhoneFieldProps = {
   name: string;
   label?: string;
   value: string | number;

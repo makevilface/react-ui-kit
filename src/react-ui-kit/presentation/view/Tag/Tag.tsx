@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import { styled } from '@linaria/react';
 
-type TTagProps = React.HTMLAttributes<HTMLSpanElement> & {
+export type TTagProps = React.HTMLAttributes<HTMLSpanElement> & {
   children: React.ReactNode;
   withBorder?: boolean;
 };

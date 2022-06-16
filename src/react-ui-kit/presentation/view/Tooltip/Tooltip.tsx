@@ -6,7 +6,7 @@ import Tippy, { TippyProps } from '@tippyjs/react/headless';
 
 import { newTooltipVM } from './Tooltip.VM';
 
-type TTooltipProps = Omit<TippyProps, 'render'> & {
+export type TTooltipProps = Omit<TippyProps, 'render'> & {
   text: React.ReactNode;
   delayToShow?: number;
 };

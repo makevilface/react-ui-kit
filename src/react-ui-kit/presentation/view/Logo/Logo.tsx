@@ -2,7 +2,7 @@ import React from 'react';
 
 import { styled } from '@linaria/react';
 
-type TLogoProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
+export type TLogoProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & {
   width?: string;
   height?: string;
 };

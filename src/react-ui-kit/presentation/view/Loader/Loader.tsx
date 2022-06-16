@@ -2,7 +2,7 @@ import React from 'react';
 
 import { styled } from '@linaria/react';
 
-type TSpinnerProps = {
+export type TLoaderProps = {
   className?: string;
   text?: string;
 };
@@ -16,7 +16,7 @@ const fractions = Array.from({ length: 12 }).map((__: unknown, index: number) =>
    --spinner-size: 32px;
   `;
  */
-const Loader = ({ className = '', text }: Readonly<TSpinnerProps>) => (
+const Loader = ({ className = '', text }: Readonly<TLoaderProps>) => (
   <SWrapper>
     <SSpinnerContainer className={className}>
       {fractions.map((fraction) => (

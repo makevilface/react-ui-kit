@@ -5,13 +5,13 @@ import { styled } from '@linaria/react';
 
 import CheckboxIcon from '../Icon/checkbox';
 
-export interface CheckboxProps {
+export interface TCheckboxProps {
   value: boolean;
   isDisabled?: boolean;
   onToggle?: () => void;
 }
 
-const Checkbox = ({ value, onToggle, isDisabled }: Readonly<CheckboxProps>) => {
+const Checkbox = ({ value, onToggle, isDisabled }: Readonly<TCheckboxProps>) => {
   const className = isDisabled ? CheckboxDisabledStyles : '';
   return (
     <SCheckbox aria-checked={value ? 'true' : 'false'} className={className} role="checkbox" onClick={onToggle}>
