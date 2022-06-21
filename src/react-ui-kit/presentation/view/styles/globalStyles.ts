@@ -187,13 +187,7 @@ export const GlobalStyles = css`
     }
 
     body {
-      --page-width: 62.5rem;
-      --page-radius: 1rem;
-      --header-height: 4rem;
-      --footer-height: 7.5rem;
-
-      --page-module: 16px;
-
+      --text-primary: #000000;
       --warning-color: #bf3100;
 
       --primary-color-0: #222222;

@@ -19,6 +19,12 @@ export { default as Tag } from './Tag';
 export { default as Panel } from './Panel';
 export { default as Carousel } from './Carousel';
 export { default as Modal } from './Modal';
+export { default as TextArea } from './TextArea';
+
+/**
+ * Styles
+ */
+export { GlobalStyles } from './styles/globalStyles';
 
 /**
  * Types
@@ -39,3 +45,4 @@ export type { TCheckboxProps } from './Checkbox';
 export type { TButtonProps } from './Button';
 export type { TAvatarProps } from './Avatar';
 export type { TAccordionProps } from './Accordion';
+export type { TTextAreaProps } from './TextArea';
