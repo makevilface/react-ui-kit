@@ -1,19 +1,25 @@
+const webpack = require('webpack');
+
 const path = require('path');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
+const paths = {
+  public: path.resolve(__dirname, './public'),
+  src: path.resolve(__dirname, './src'),
+  build: path.resolve(__dirname, './dist'),
+};
 const isDev = process.env.NODE_ENV !== 'production';
-
-const ROOT = path.resolve(__dirname);
 
 module.exports = {
   entry: {
-    app: './src/index',
+    app: `${paths.src}/index`,
   },
   output: {
-    path: path.resolve(ROOT, 'dist'),
+    path: paths.build,
     publicPath: '/dist/',
     filename: '[name].bundle.js',
   },
@@ -23,13 +29,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
-    alias: {
-      '@': path.resolve(ROOT, 'src'),
-      '@components': path.resolve(ROOT, 'src/components'),
-      '@utils': path.resolve(ROOT, 'src/utils'),
-      '@styles': path.resolve(ROOT, 'src/styles'),
-      '@layout': path.resolve(ROOT, 'src/layout'),
-    },
   },
   module: {
     rules: [
@@ -79,15 +78,18 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: 'styles.css', ignoreOrder: true }),
     new HtmlWebpackPlugin({
-      template: path.join(ROOT, 'public', 'index.html'),
+      template: `${paths.public}/index.html`,
     }),
     new ForkTsCheckerWebpackPlugin(),
     new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      React: 'react',
+    }),
   ],
   devServer: {
     historyApiFallback: true,
     publicPath: '/dist/',
-    contentBase: path.join(ROOT, 'public'),
+    contentBase: paths.public,
     compress: true,
     port: 9000,
   },
