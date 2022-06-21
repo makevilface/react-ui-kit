@@ -79,7 +79,8 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.30.0",
     "react-number-format": "^4.9.3",
-    "swiper": "^8.2.4",  
+    "react-textarea-autosize": "^8.3.4",
+    "swiper": "^8.2.4",
     "yup": "^0.32.11"
   },
   "resolutions": {
