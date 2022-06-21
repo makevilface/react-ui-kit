@@ -11,7 +11,15 @@ export type TAccordionProps = {
 };
 
 const Accordion = ({ items, title }: Readonly<TAccordionProps>) => {
-  const [activeItemIndex, setActiveItemIndex] = React.useState<number>(2);
+  const [activeItemIndex, setActiveItemIndex] = React.useState<number | null>(2);
+
+  const handelChangeActiveItem = (index: number) => {
+    if (activeItemIndex === index) {
+      setActiveItemIndex(null);
+    } else {
+      setActiveItemIndex(index);
+    }
+  };
 
   return (
     <SContainer>
@@ -22,7 +30,7 @@ const Accordion = ({ items, title }: Readonly<TAccordionProps>) => {
           item={item}
           shouldShowDescription={index === activeItemIndex}
           onClick={() => {
-            setActiveItemIndex(index);
+            handelChangeActiveItem(index);
           }}
         />
       ))}
