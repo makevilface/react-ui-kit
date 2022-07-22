@@ -1,28 +1,25 @@
-import React from 'react';
 import { Controller, FormProvider, useForm } from 'react-hook-form';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import { Button, Carousel, FormField, PhoneField } from '../../react-ui-kit/presentation/view';
+import { Button, FormField, PhoneField, TextArea } from '../react-ui-kit/presentation/view';
 
-const Home = () => {
+const FormExample = () => {
   const form = useForm({
     mode: 'onChange',
     resolver: yupResolver(
       yup.object().shape({
         email: yup.string().email('Неверная почта').optional(),
         phone: yup.string().trim().required('Введите номер телефона'),
+        textarea: yup.string().max(50, 'Строка не должна превышать 50 символов'),
       }),
     ),
   });
-  const onSubmit = async (data: any) => {
-    console.log('-----data', data);
-  };
+  const onSubmit = async (data: unknown) => {};
 
   return (
     <div>
-      <Carousel />
       <FormProvider {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
@@ -34,6 +31,7 @@ const Home = () => {
             placeholder="test@gmail.com"
             tabIndex={-1}
           />
+
           <Controller
             control={form.control}
             defaultValue=""
@@ -50,6 +48,7 @@ const Home = () => {
               />
             )}
           />
+          <TextArea aria-label="Об проекте" maxLength={50} name="textarea" placeholder="Об проекте" />
 
           <div>
             <Button disabled={!form.formState.isValid || form.formState.isSubmitting} type="submit">
@@ -62,4 +61,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default FormExample;

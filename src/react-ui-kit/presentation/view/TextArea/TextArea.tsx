@@ -50,7 +50,7 @@ const STextArea = styled.div`
   width: 100%;
   height: 100%;
   margin: auto;
-  background: transparent;
+  background: #edeef0;
   border-radius: 8px;
   padding: 1px 3px 14px 2px;
   overflow-y: auto;
@@ -101,7 +101,7 @@ const STextArea = styled.div`
     }
 
     &::selection {
-      background: transparent;
+      background: #8f6a2f;
     }
   }
 

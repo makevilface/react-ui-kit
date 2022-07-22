@@ -14,6 +14,6 @@ const Demo = styled.div`
 
 storiesOf('TextArea', module).add('default', () => (
   <StorybookContainer>
-    <Demo>{/* <TextArea maxLength={40} minRows={2} placeholder="Об проекте" value="" /> */}</Demo>
+    <Demo>WIP</Demo>
   </StorybookContainer>
 ));
