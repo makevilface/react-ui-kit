@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 
 import { GlobalStyles } from './react-ui-kit/presentation/view/styles/globalStyles';
 import Theme from './react-ui-kit/presentation/view/Theme';
-import Home from './routes/Home';
+import FormExample from './usage/FormExample';
 
 ReactDOM.render(
   <StrictMode>
     <Theme>
       <div className={GlobalStyles}>
-        <Home />
+        <FormExample />
       </div>
     </Theme>
   </StrictMode>,
